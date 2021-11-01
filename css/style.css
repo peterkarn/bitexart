@@ -2860,6 +2860,11 @@ select:focus {
 }
 
 @media screen and (max-width: 540px) {
+
+  .pic__top-top::after {
+    bottom: 1.5%;
+  }
+
   .offer__item-text {
     font-size: 12px;
   }
