@@ -1647,7 +1647,7 @@ select:focus {
 }
 
 .bottom__form-input {
-  background-color: #000;
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid #FFFFFF;
   color: #FFFFFF;
@@ -2509,8 +2509,16 @@ select:focus {
 }
 
 @media screen and (max-width: 768px) {
+
   .stages {
     padding-bottom: 50px;
+  }
+
+  .stages__title::before,
+  .introduction__title::before,
+  .offer__title::before,
+  .trust__title::before {
+    display: none;
   }
 
   .stroked__phantom {
