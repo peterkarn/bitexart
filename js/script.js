@@ -50,7 +50,9 @@ strokedBlocks.forEach(el => {
   el.insertAdjacentHTML('beforeend', `<span class="stroked__phantom">${text}</span>`,);
 });
 
-AOS.init();
+  AOS.init({
+    once: true,
+  });
 
 
 var splide = new Splide( '.trust-slider', {
@@ -98,6 +100,9 @@ var splide = new Splide( '.introduction__slider', {
     },
     768: {
       perPage: 1,
+      gap: '10px',
+      loop: true,
+      autoWidth: true
     },
   } 
 } );
@@ -124,6 +129,9 @@ var splide2 = new Splide( '.second__introduction__slider', {
     },
     768: {
       perPage: 1,
+      gap: '10px',
+      loop: true,
+      autoWidth: true
     },
   }
 } );
@@ -230,38 +238,38 @@ const tabs = document.querySelector('.tabs');
   const gs = document.querySelector('.preloader__gs')
   const col = document.querySelector('.preloader__col')
 
-window.addEventListener('load', function () {
-      gs.classList.add('transparent');
-      col.classList.remove('transparent');
-      setTimeout(() => {
-        loader.classList.add('hide');
-        document.querySelector('.pic').classList.add('animate');
-        document.body.classList.remove('locked')
-      }, 1800);
-  })
+  window.addEventListener('load', function () {
+        gs.classList.add('transparent');
+        col.classList.remove('transparent');
+        setTimeout(() => {
+          loader.classList.add('hide');
+          document.querySelector('.pic').classList.add('animate');
+          document.body.classList.remove('locked')
+        }, 1800);
+    })
 
-  const myModal = new HystModal({
-    linkAttributeName: "data-hystmodal",
-});
+    const myModal = new HystModal({
+      linkAttributeName: "data-hystmodal",
+  });
 
 
-window.addEventListener('scroll', () => {
-  let scrollDistance = window.scrollY;
-  let heroHeight = document.querySelector('.hero').offsetHeight;
-  let header = document.querySelector('.header');
-  let headerHeight =header.offsetHeight;
-  let body = document.body;
+  window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+    let heroHeight = document.querySelector('.hero').offsetHeight;
+    let header = document.querySelector('.header');
+    let headerHeight =header.offsetHeight;
+    let body = document.body;
 
-  if (scrollDistance > heroHeight) {
-    header.classList.add('fixed');
-    body.style.paddingTop = headerHeight + 'px';
-  }
+    if (scrollDistance > heroHeight) {
+      header.classList.add('fixed');
+      body.style.paddingTop = headerHeight + 'px';
+    }
 
-  if (scrollDistance < heroHeight) {
-    header.classList.remove('fixed');
-    body.style.paddingTop = "";
-  }
-});
+    if (scrollDistance < heroHeight) {
+      header.classList.remove('fixed');
+      body.style.paddingTop = "";
+    }
+  });
 
 
 

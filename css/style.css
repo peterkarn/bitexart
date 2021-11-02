@@ -188,6 +188,66 @@ p {
   margin: 0;
 }
 
+/* animations */
+
+[data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 3s;
+  transform: translateX(10%);
+}
+
+[data-aos="new-animation"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.item-1[data-aos="new-animation"] {
+  transition-delay: 1s;
+}
+
+.item-2[data-aos="new-animation"] {
+  transition-delay: 2s;
+}
+
+.item-3[data-aos="new-animation"] {
+  transition-delay: 3s;
+}
+
+.item-4[data-aos="new-animation"] {
+  transition-delay: 4s;
+}
+
+@media screen and (max-width: 768px) {
+  [data-aos="new-animation"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+  }
+
+  [data-aos="new-animation"].aos-animate {
+    opacity: 1;
+  }
+
+  .item-1[data-aos="new-animation"] {
+    transition-delay: 0.1s;
+  }
+
+  .item-2[data-aos="new-animation"] {
+    transition-delay: 0.3s;
+  }
+
+  .item-3[data-aos="new-animation"] {
+    transition-delay: 0.5s;
+  }
+
+  .item-4[data-aos="new-animation"] {
+    transition-delay: 0.6s;
+  }
+}
+
+
+
 .container {
   max-width: 1630px;
   margin: 0 auto;
@@ -2686,6 +2746,10 @@ select:focus {
   .offer__overlay-item_6 {
     top: 38%;
     height: 20%;
+  }
+
+  .introduction__slide {
+    width: 90%;
   }
 
   .trust__title {
