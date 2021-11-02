@@ -1975,6 +1975,7 @@ select:focus {
 }
 
 .soon__btn-wrapper {
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
